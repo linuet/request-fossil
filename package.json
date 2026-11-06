@@ -1,0 +1,22 @@
+{
+  "name": "request-fossil",
+  "version": "0.1.0",
+  "description": "Record real HTTP traffic as fossils and replay it against a new backend to catch regressions.",
+  "type": "module",
+  "bin": {"request-fossil": "./dist/cli.js"},
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js",
+    "test": "node --import tsx --test tests/*.test.ts"
+  },
+  "keywords": ["typescript","http","replay","regression-testing","api","proxy","developer-tools","diff"],
+  "author": "linuet",
+  "license": "MIT",
+  "engines": {"node": ">=20"},
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}
